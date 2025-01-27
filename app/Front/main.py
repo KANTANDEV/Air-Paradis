@@ -2,12 +2,15 @@ import streamlit as st
 
 # Fonction d'analyse de sentiment simple pour tests
 def analyze_sentiment(model, text):
-    if "positif" in text.lower():
-        return "Positif 😊"
-    elif "négatif" in text.lower():
-        return "Négatif 😢"
-    else:
-        return "Neutre 😐"
+    if model == "Modèle Simple":
+        print("Modèle Simple")
+        return "Positif"
+    elif model == "Modèle Avancé":
+        print("Modèle Avancé")
+        return "Négatif"
+    elif model == "Modèle BERT":
+        print("Modèle BERT")
+        return "Neutre"
 
 # Configuration de la page Streamlit
 st.set_page_config(
@@ -17,7 +20,8 @@ st.set_page_config(
 )
 
 # Titre et description
-st.title("Analyse de Sentiment des Tweets")
+st.title("Air Paradis")
+st.write("Analyse de sentiment")
 st.write("Choisissez un modèle, entrez votre texte, et découvrez si le sentiment est positif ou négatif.")
 
 # Sélection du modèle
